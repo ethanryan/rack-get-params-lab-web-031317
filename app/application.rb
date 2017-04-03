@@ -42,13 +42,6 @@ class Application
         resp.write "We don't have that item"
       end
 
-    # elsif req.path.match(/add/)
-    #   search_term = req.params["q"]
-    #   resp.write handle_search(search_term)
-    #     #resp.write "#{item}\n"
-    #   @@cart << search_term
-    #   resp.write "added #{search_term}\n"
-
     elsif req.path.match(/search/)
       search_term = req.params["q"]
       resp.write handle_search(search_term)
